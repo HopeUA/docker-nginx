@@ -2,7 +2,7 @@ FROM hope/base
 
 MAINTAINER Sergey Sadovoi <sergey@hope.ua>
 
-ENV NGINX_VERSION 1.8.0
+ENV NGINX_VERSION 1.8.1
 
 RUN yum install -y http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm \
      && yum install -y nginx-$NGINX_VERSION \
