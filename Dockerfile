@@ -1,17 +1,17 @@
-FROM hope/base
+FROM hope/base-alpine:3.3
 
 MAINTAINER Sergey Sadovoi <sergey@hope.ua>
 
-ENV NGINX_VERSION 1.8.1
+ENV NGINX_VERSION=1.8.1
 
-RUN yum install -y http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm \
-     && yum install -y nginx-$NGINX_VERSION \
-     && yum clean all
+RUN \
+    apk add --no-cache nginx
 
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
+    # Forward logs to std output
+    ln -sf /dev/stdout /var/log/nginx/access.log
+    ln -sf /dev/stderr /var/log/nginx/error.log
 
-ONBUILD COPY Resources/conf /etc/nginx
+ONBUILD COPY container-files/conf /etc/nginx
 
 EXPOSE 80
 EXPOSE 443
