@@ -1,8 +1,8 @@
-FROM hope/base-alpine:3.3
+FROM hope/base-alpine:3.4
 
 MAINTAINER Sergey Sadovoi <sergey@hope.ua>
 
-ENV NGINX_VERSION=1.8.1
+ENV NGINX_VERSION=1.10.1
 
 RUN \
     apk add --no-cache nginx && \
