@@ -15,8 +15,6 @@ Create __Dockerfile__ with following content
 
     FROM hope/nginx
     
-Copy configuration to __container-files/conf__
-
 Build image
 
     docker build -t nginx .
