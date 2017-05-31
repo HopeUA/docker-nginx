@@ -17,4 +17,4 @@ EXPOSE 80
 EXPOSE 443
 
 ENTRYPOINT ["nginx"]
-CMD ["-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+CMD ["-c", "/etc/nginx/nginx.conf"]
