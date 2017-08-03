@@ -1,7 +1,7 @@
 FROM hope/alpine:3.6
 
 ENV \
-    NGINX_VERSION=1.12.0 \
+    NGINX_VERSION=1.12.1 \
     NGINX_CONFIG=/etc/nginx/nginx.conf
 
 RUN \

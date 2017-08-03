@@ -1,4 +1,4 @@
-# Nginx proxy image
+# Nginx image
 
 [![hope/nginx](https://img.shields.io/badge/docker-hope/nginx-brightgreen.svg)](https://hub.docker.com/r/hope/nginx/)
 
